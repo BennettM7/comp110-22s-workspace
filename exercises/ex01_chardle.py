@@ -1,5 +1,5 @@
 """EX01 - Chardle"""
-__author__: str =  "730476910"
+__author__ = "73047610"
 
 full_word: str = input("Enter a 5 letter word: ")
 if len(full_word) != 5:
