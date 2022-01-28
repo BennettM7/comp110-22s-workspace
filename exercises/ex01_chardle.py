@@ -1,5 +1,5 @@
-"""EX01 - Chardle"""
-__author__ = "73047610"
+"""EX01 - Chardle."""
+__author__: str = "730476910"
 
 full_word: str = input("Enter a 5 letter word: ")
 if len(full_word) != 5:
@@ -30,7 +30,10 @@ if single_letter == full_word[4]:
     print(f"{single_letter} found at index 4")
     count += 1
 
-if count > 0:
-    print(f"{count} instances of {single_letter} found in {full_word}.")
+if count == 1:
+    print(f"{count} instance of {single_letter} found in {full_word}.")
 else:
-    print(f"No instances of {single_letter} found in {full_word}")
+    if count > 1:
+        print(f"{count} instances of {single_letter} found in {full_word}.")
+    else:
+        print(f"No instances of {single_letter} found in {full_word}.")
