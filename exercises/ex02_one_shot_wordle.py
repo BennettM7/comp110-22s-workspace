@@ -11,7 +11,7 @@ results_of_guess: str = ""
 
 
 while len(user_guess) != len(secret_word):
-    user_guess: str = input(f"That was not {len(secret_word)} letters! try again: ")
+    user_guess = input(f"That was not {len(secret_word)} letters! try again: ")
 
 while i < len(secret_word):
     if user_guess[i] == secret_word[i]:
