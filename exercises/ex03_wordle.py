@@ -37,7 +37,7 @@ def input_guess(guess_length: int) -> str:
     """Checks the length of the word."""
     user_input: str = input(f"Enter a {guess_length} charcter word: ")
     while len(user_input) != guess_length:
-        user_input = input(f"that wasn't {guess_length} chars! Try again: ")
+        user_input = input(f"That wasn't {guess_length} chars! Try again: ")
     return user_input
 
 
@@ -63,6 +63,5 @@ def main() -> None:
         print(f"X/{max_turns} - Sorry, try again tomorrow!")
 
 
-__name__: str = "__main__"
 if __name__ == "__main__":
     main()
