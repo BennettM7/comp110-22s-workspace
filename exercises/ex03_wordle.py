@@ -33,11 +33,11 @@ def emojified(word_guess: str, sec_word: str) -> str:
     return boxes
 
 
-def input_guess(guess_length: int) -> str:
+def input_guess(expected_length: int) -> str:
     """Checks the length of the word."""
-    user_input: str = input(f"Enter a {guess_length} charcter word: ")
-    while len(user_input) != guess_length:
-        user_input = input(f"That wasn't {guess_length} chars! Try again: ")
+    user_input: str = input(f"Enter a {expected_length} character word: ")
+    while len(user_input) != expected_length:
+        user_input = input(f"That wasn't {expected_length} chars! Try again: ")
     return user_input
 
 
@@ -46,13 +46,13 @@ def main() -> None:
     max_turns: int = 6
     turns_taken: int = 1
     secret_word: str = "codes"
-    correct_answer: str = "\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9"
+    # correct_answer: str = "\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9"
     while turns_taken <= max_turns:
-        print(f"=== turns {str(turns_taken)}/{str(max_turns)} ===")
+        print(f"=== Turn {str(turns_taken)}/{str(max_turns)} ===")
         # input_guess(5)
         user_guess: str = input_guess(5)
         emojis: str = emojified(user_guess, secret_word)
-        if emojis == correct_answer:
+        if user_guess == secret_word:
             print(emojis)
             print(f"You won in {turns_taken}/{max_turns} turns!")
             break
